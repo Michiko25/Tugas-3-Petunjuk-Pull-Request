@@ -1,4 +1,5 @@
 import "dotenv/config";
+import cors from "cors";
 import express from "express";
 import prisma from "./config/prisma";
 import { errorHandler, notFound } from "./middlewares/error";
@@ -9,6 +10,7 @@ import { sendSuccess } from "./utils/response";
 const app = express();
 
 app.use(logger);
+app.use(cors()); // izinkan frontend (port berbeda) memanggil API
 app.use(express.json());
 
 app.get("/health", async (_req, res) => {
