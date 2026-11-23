@@ -1,0 +1,14 @@
+@reference "../../../../app/globals.css";
+
+.field {
+    @apply mb-4;
+}
+.label {
+    @apply mb-1.5 block text-sm font-semibold text-slate-800;
+}
+.hint {
+    @apply mt-1.5 text-xs text-slate-500;
+}
+.error {
+    @apply mt-1.5 text-xs text-red-600;
+}
