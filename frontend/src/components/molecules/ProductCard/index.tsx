@@ -1,12 +1,17 @@
-import type { Product } from "../../../types/product"
 import { TbPackage } from "react-icons/tb"
-import Button from "../../atoms/Button"
+import type { Product } from "../../../types/product"
 import { formatRupiah } from "../../../utils/formatRupiah"
+import Button from "../../atoms/Button"
+import LinkButton from "../../atoms/LinkButton"
 import styles from "./styles.module.css"
 
-type Props = { product: Product; onSelect: (id: number) => void }
+type Props = {
+    product: Product
+    onEdit: (product: Product) => void
+    onDelete: (product: Product) => void
+}
 
-export default function ProductCard({ product, onSelect }: Props) {
+export default function ProductCard({ product, onEdit, onDelete }: Props) {
     return (
         <article className={styles.card}>
             <div className={styles.header}>
@@ -15,7 +20,29 @@ export default function ProductCard({ product, onSelect }: Props) {
             </div>
             <h2 className={styles.name}>{product.name}</h2>
             <p className={styles.price}>{formatRupiah(product.price)}</p>
-            <Button onClick={() => onSelect(product.id)}>Pilih produk</Button>
+            <div className={styles.actions}>
+                <LinkButton
+                    to={`/products/${product.id}`}
+                    variant="secondary"
+                    aria-label={`Lihat detail ${product.name}`}
+                >
+                    Detail
+                </LinkButton>
+                <Button
+                    variant="secondary"
+                    aria-label={`Edit ${product.name}`}
+                    onClick={() => onEdit(product)}
+                >
+                    Edit
+                </Button>
+                <Button
+                    variant="subtleDanger"
+                    aria-label={`Hapus ${product.name}`}
+                    onClick={() => onDelete(product)}
+                >
+                    Hapus
+                </Button>
+            </div>
         </article>
     )
 }
