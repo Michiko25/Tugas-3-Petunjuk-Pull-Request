@@ -1,11 +1,11 @@
 @reference "../../../../app/globals.css";
 
 .id {
-    @apply mb-4 text-xs text-slate-500;
+  @apply mb-4 text-xs text-slate-500;
 }
 .alert {
-    @apply mb-4;
+  @apply mb-4;
 }
 .actions {
-    @apply mt-6 grid grid-cols-2 gap-3;
+  @apply mt-6 grid grid-cols-2 gap-3;
 }

@@ -1,18 +1,31 @@
-import type { ReactNode } from "react"
+import type { ButtonHTMLAttributes } from "react"
 import styles from "./styles.module.css"
 
-type Props = {
-    variant?: "error" | "info" | "success"
-    children: ReactNode
+const variants = {
+    primary: "btn-primary",
+    secondary: "btn-secondary",
+    danger: "btn-danger",
+    subtleDanger: "btn-subtle-danger",
 }
 
-export default function Alert({ variant = "info", children }: Props) {
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+    variant?: keyof typeof variants
+}
+
+export default function Button({
+    variant = "primary",
+    className = "",
+    type = "button",
+    children,
+    ...props
+}: ButtonProps) {
     return (
-        <div
-            role={variant === "error" ? "alert" : "status"}
-            className={`${styles.alert} ${styles[variant]}`}
+        <button
+            type={type}
+            className={`${styles.button} ${variants[variant]} ${className}`}
+            {...props}
         >
             {children}
-        </div>
+        </button>
     )
 }

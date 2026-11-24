@@ -1,20 +1,20 @@
-import type { InputHTMLAttributes } from "react"
-import styles from "./styles.module.css"
+import type { InputHTMLAttributes } from "react";
+import styles from "./styles.module.css";
 
 type Props = InputHTMLAttributes<HTMLInputElement> & {
-    invalid?: boolean
-}
+  invalid?: boolean;
+};
 
 export default function Input({
-    invalid = false,
-    className = "",
-    ...props
+  invalid = false,
+  className = "",
+  ...props
 }: Props) {
-    return (
-        <input
-            aria-invalid={invalid || undefined}
-            className={`${styles.input} ${invalid ? styles.invalid : ""} ${className}`}
-            {...props}
-        />
-    )
+  return (
+    <input
+      aria-invalid={invalid || undefined}
+      className={`${styles.input} ${invalid ? styles.invalid : ""} ${className}`}
+      {...props}
+    />
+  );
 }

@@ -1,8 +1,8 @@
 @reference "../../../../app/globals.css";
 
 .back {
-    @apply mb-6;
+  @apply mb-6;
 }
 .notice {
-    @apply mt-6 text-sm leading-6 text-slate-600;
+  @apply mt-6 text-sm leading-6 text-slate-600;
 }

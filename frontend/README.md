@@ -34,10 +34,10 @@ Buka http://127.0.0.1:5173. Alamat backend dibaca dari `VITE_API_BASE_URL` di `f
 
 ## Perintah
 
-| Perintah | Kegunaan |
-| --- | --- |
-| `npm run dev` | Menjalankan aplikasi untuk pengembangan |
-| `npm run typecheck` | Memeriksa tipe TypeScript |
-| `npm run lint` | Memeriksa aturan kode |
-| `npm test` | Menjalankan unit test |
-| `npm run build` | Memeriksa tipe dan membuat build produksi |
+| Perintah            | Kegunaan                                  |
+| ------------------- | ----------------------------------------- |
+| `npm run dev`       | Menjalankan aplikasi untuk pengembangan   |
+| `npm run typecheck` | Memeriksa tipe TypeScript                 |
+| `npm run lint`      | Memeriksa aturan kode                     |
+| `npm test`          | Menjalankan unit test                     |
+| `npm run build`     | Memeriksa tipe dan membuat build produksi |

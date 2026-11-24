@@ -1,20 +1,20 @@
 @reference "../../../../app/globals.css";
 
 .info {
-    @apply mb-4 flex flex-col gap-1 rounded-lg border border-slate-200 p-3;
+  @apply mb-4 flex flex-col gap-1 rounded-lg border border-slate-200 p-3;
 }
 .id {
-    @apply text-xs text-slate-500;
+  @apply text-xs text-slate-500;
 }
 .name {
-    @apply text-base wrap-break-word text-slate-900;
+  @apply text-base wrap-break-word text-slate-900;
 }
 .price {
-    @apply text-base font-semibold text-blue-600;
+  @apply text-base font-semibold text-blue-600;
 }
 .alert {
-    @apply mb-4;
+  @apply mb-4;
 }
 .actions {
-    @apply grid grid-cols-2 gap-3;
+  @apply grid grid-cols-2 gap-3;
 }
