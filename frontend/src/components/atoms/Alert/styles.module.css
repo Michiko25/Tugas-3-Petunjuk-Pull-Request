@@ -1,0 +1,14 @@
+@reference "../../../../app/globals.css";
+
+.alert {
+  @apply rounded-lg border p-4 text-sm leading-6;
+}
+.error {
+  @apply border-red-200 bg-red-50 text-red-700;
+}
+.info {
+  @apply border-blue-200 bg-blue-50 text-blue-700;
+}
+.success {
+  @apply border-green-200 bg-green-50 text-green-700;
+}

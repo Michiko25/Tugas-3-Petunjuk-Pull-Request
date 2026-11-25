@@ -1,0 +1,23 @@
+@reference "../../../../app/globals.css";
+
+.header {
+  @apply border-b border-slate-200 bg-white;
+}
+.nav {
+  @apply mx-auto flex w-full max-w-[1200px] items-center justify-between gap-4 px-5 py-3 sm:px-8;
+}
+.brand {
+  @apply inline-flex items-center gap-2 text-base font-bold text-slate-900;
+}
+.brandIcon {
+  @apply size-5 text-blue-600;
+}
+.list {
+  @apply m-0 flex list-none items-center gap-1 p-0;
+}
+.link {
+  @apply rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900;
+}
+.active {
+  @apply bg-blue-50 text-blue-700 hover:bg-blue-50 hover:text-blue-700;
+}
